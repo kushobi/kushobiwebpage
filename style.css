@@ -190,6 +190,7 @@ nav {
 				justify-self: center;
 				align-self: start;
 			}
+
 			.creator-desc {
 				display: inline-grid;
 				text-align: center;
@@ -219,8 +220,14 @@ nav {
 					color: #888A85FF;
 				}
 
+	/*---------roadmap section-----------*/
 
-
+	.btn.lower {
+		background: var(--dark);
+		color: var(--light);
+		border-radius: var(--radius);
+		border: var(--border-l-thick);
+	}
 
 
 
