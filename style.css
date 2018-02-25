@@ -41,6 +41,7 @@ p {
 }
 
 
+
 .btn {
 	padding: 0.5rem 1rem;
 	background: var(--dark);
@@ -162,6 +163,11 @@ nav {
 			text-align: center;
 		}
 
+			.concept-intro {
+				display: grid;
+				grid-template-rows: 0.5fr 3fr;
+				padding-top: 1rem;
+			}
 
 	/*-------creator section----------*/
 
@@ -230,14 +236,23 @@ nav {
 
 
 
+
 	/*---------Donate section -----------*/
 
 	.center-box.donate-section {
-		display: grid;
-		grid-template-rows: repeat(1, );
+		height: 40%;
+		display: inline-grid;
+		grid-template-rows: repeat(1, 0.5fr 0.5fr 0.5fr 0.75fr);
 		background: var(--dark);
-
 	}
+		.center-box.donate-section {
+			padding-top: 1rem;
+		}
+
+		.center-box.donate-section .social {
+			align-self: start;
+
+		}
 
 			.donate-section .social a > i {
 				color: var(--light);
@@ -249,7 +264,18 @@ nav {
 				color: var(--light);
 				border-radius: var(--radius);
 				border: var(--border-l-thick);
+				justify-self: center;
+				align-self: center;
+				padding: 1rem 2rem;
+			
 			}
+
+				a.btn.lower:hover {
+					background: var(--light);
+					color: var(--dark);
+				}
+
+
 
 
 
