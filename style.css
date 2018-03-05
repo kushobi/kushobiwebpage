@@ -28,7 +28,12 @@ html {
 
 body{
 	background: var(--light);
-	line-height: 1.5;
+	line-height: 1.5;	
+	background-image: url("img/background/photo-1highq.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
 }
 
 h1, h2, h3 {
@@ -138,7 +143,7 @@ nav {
 
 /*-------------container area---------------*/
 .container {
-	background: var(--primary);
+	background: rgba(0, 0, 0, 0,) ;
 	display: grid;
 	grid-row: repeat(4, 1fr);
 
@@ -181,10 +186,6 @@ nav {
 		.wrapper {
 			justify-self: center;
 			align-self: center;
-			display: grid;
-			grid-template-columns: repeat(4, 1fr);
-			grid-gap: 1rem;
-
 		}
 
 		.creator-individual{
@@ -231,14 +232,8 @@ nav {
 					color: #888A85FF;
 				}
 
-	/*---------roadmap section-----------*/
-
-
-
-
 
 	/*---------Donate section -----------*/
-
 	.center-box.donate-section {
 		height: 40%;
 		display: inline-grid;
@@ -275,10 +270,21 @@ nav {
 					color: var(--dark);
 				}
 
-
-
-
-
-
-
-
+	/*---------roadmap section-----------*/
+	.strip-section.roadmap {
+		background: var(--dark);
+		background-image: url('img/roadmap/roadmap-3.svg');
+		background-repeat: no-repeat;
+		background-size: auto;
+		background-position: center;
+		display: grid;
+	}
+		.strip-section.roadmap .wrapper.roadmap{
+		height: 100%;
+		width: 75%;
+		border: white solid 1px;
+		background: rgba(255, 255, 255, 0);
+		display: grid;
+		grid-template-rows: 1fr 1fr 1fr;
+		color: var(--light);
+		}
