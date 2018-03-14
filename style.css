@@ -13,9 +13,10 @@ html {
 
 :root{
 	--primary: #ffffff;
-	--dark: /*#2f3542*/ #1d1d1d ;
-	--light: /*#f1f2f6*/ #fff;
+	--dark: #1d1d1d ;
+	--light: #f1f2f6;
 	--grey: #a4b0be;
+	--font: 'Andika', "Mukta Vaani", sans-serif;
 	--border-b-thick: var(--dark) 1px solid;
 	--border-b-thin:  var(--dark) 0.25px solid;
 	--border-l-thick: var(--light) 0.8px solid;
@@ -30,7 +31,7 @@ p{
 	color: var(--light);
 }
 
-a.btn{
+.btn{
 	padding: 0.5rem 2rem;
 	background: var(--dark);
 	border-radius: 1rem;
@@ -38,7 +39,7 @@ a.btn{
 	color: var(--light);
 }
 
-a.btn:hover {
+.btn:hover {
 	background: var(--light);
 	border: var(--border-b-thin);
 	color: var(--dark);
@@ -133,6 +134,7 @@ img{
 
 	nav{
 		position: fixed;
+		z-index: 10;
 		left:0;
 		right:0;
 	}
@@ -304,30 +306,28 @@ footer{
 	padding-top:10rem;
 	max-width: 90%;
 	display: grid;
-	grid-row-gap: 2rem;
-	grid-template-columns: 0.05fr 1fr 1fr 1fr;
-	grid-auto-rows: auto;	
-	/*grid-gap: 2rem;*/
+	grid-template-columns: repeat(1, 0.05fr 1fr 1fr 1fr);	
 	grid-template-areas:
-	"social blog-main blog-main blog-searchbar"
-	"social blog-main blog-main blog-recent"
-	"social blog-main blog-main blog-subscribe"
-	"social blog-main blog-main blog-archive";
+	"social blog-main blog-main sidebar"
+	"social blog-main blog-main sidebar"
+	"social blog-main blog-main sidebar"
+	"social blog-main blog-main sidebar";
 
 }
 
-.blog-container > .blog-main, .blog-searchbar, .blog-recent, .blog-subscribe, .blog-archive {
-	padding: 2rem;
-	border-radius: var(--radius);
-	background: var(--dark);
-}
+	.blog-main {
+		padding: 2rem;
+		border-radius: var(--radius);
+		border: var(--border-b-thick);
+	}
+
 	.blog-container .social.blog {
 		grid-area: social;
 		padding: 2.25rem;
 		display: grid;
 		grid-template-rows: repeat(3, 0.005fr);
 		position: fixed;
-		top: 32rem;
+		top: 35rem;
 		text-align: center;
 		}
 
@@ -336,10 +336,10 @@ footer{
 		}
 
 	.blog-main{
+		background: var(--dark);
 		grid-area: blog-main;
 		display: grid;
 		grid-template-columns: auto;
-		grid-auto-rows: minmax(20rem, auto);
 		margin-right: 2rem;
 	}
 
@@ -350,23 +350,90 @@ footer{
 			margin: 1rem auto;
 			width: 100%;
 			height: 20rem;
+			border-radius: var(--radius);
+		}
+
+aside {
+	grid-area: sidebar;
+}
+
+aside > .blog-recent, .blog-subscribe, .blog-archive {
+		margin-top: 2rem;
+		background: var(--dark);
+		padding: 1.75rem;
+		border-radius: var(--radius);
+}
+
+	.blog-searchbar{
+		padding: 0;
+		align-self: start;
+	}
+		.blog-searchbar > form {
+			background: var(--dark);
+			padding: 1.75rem;
+			border-radius: var(--radius);
+			align-self: start;
+		}
+			aside div > form input[type=text] {
+				box-sizing: border-box;
+				width: 100%;
+				padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+				background-image: url('./img/widgets/fa-fa-search.png');
+				background-position: 0.5rem;
+				background-size: 1.5rem 1.5rem;
+				background-repeat: no-repeat;
+				font-size: 1rem;
+				border-radius: 0.5rem;
+				font-family: var(--font);
+				background-color: lightgrey;
+				border: var(--border-l-thick);
+				outline: none;
+
+			}
+				aside div > form input[type=text]:focus{
+					background-color: var(--light);
+					border: var(--border-b-thick);
+				}
+
+
+	.blog-recent {		
+		height: 15rem;
+
+	}
+
+	.blog-subscribe > h1 {
+		height: auto;
+		text-align: center;
+		padding-bottom: 1rem;
+
+	}
+		.blog-subscribe .btn{
+			display: inline-block;
+			box-sizing: border-box;
+			margin-top: 0.5rem;
+			border-radius: 0.5rem;
+			width: 100%;
+			text-align: center;
+			background-color: var(--light);
+			color: var(--dark);
+		}
+			.blog-subscribe .btn:hover {
+				background: lightgrey;
+			}
+
+	.blog-archive {
+		height: auto;
+	}
+		ul span > li {
+			list-style: square;
+
+		}
+
+		ul > span {
+			color: var(--light);
+			line-height: 2;
 		}
 
 
-	.blog-searchbar{
-		grid-area: blog-searchbar;
-		grid-auto-rows: minmax(20rem, 20rem);
-	}
-	.blog-recent{
-		grid-area: blog-recent;
-		grid-auto-rows: minmax(20rem, 20rem);
-	}
-	.blog-subscribe{
-		grid-area: blog-subscribe;
-		grid-auto-rows: minmax(20rem, 20rem);
-	}
-	.blog-archive{
-		grid-area: blog-archive;
-		grid-auto-rows: minmax(20rem, 20rem);
-	}
+
 
