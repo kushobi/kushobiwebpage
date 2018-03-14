@@ -34,7 +34,7 @@ p{
 .btn{
 	padding: 0.5rem 2rem;
 	background: var(--dark);
-	border-radius: 1rem;
+	border-radius: var(--radius);
 	text-decoration: none;
 	color: var(--light);
 }
@@ -54,16 +54,16 @@ p{
 	color: var(--dark);
 }
 
-body{
+body {
 	background: var(--light);
 }
 
-img{
+img {
 	height: 100%;
 	width: 100%;
 }
 
-.section-full{
+.section-full {
 	height: 100vh;
 	display: grid;
 	background: var(--light);
@@ -72,7 +72,7 @@ img{
     justify-items: center;
     align-items: center;
 }
-		.center-box{
+		.center-box {
 		max-height: 30rem;
 		width: 50%;
 		background: var(--dark);
@@ -83,7 +83,7 @@ img{
 
 	}
 
-.section-strip{
+.section-strip {
 	height: 60vh;
 	display:grid;
 }
@@ -94,7 +94,7 @@ img{
 	display: grid;
 
 }
-	.navigation .navigation.upper{
+	.navigation .navigation.upper {
 		grid-template-columns: 1fr 0.07fr 0.06fr;
 		justify-items: center;
 		align-items: center;
@@ -105,7 +105,7 @@ img{
 			justify-self: start;
 		}
 
-	.navigation .navigation.lower{
+	.navigation .navigation.lower {
 		background: var(--dark);
 		display: inline-grid;
 		grid-template-columns: repeat(1, 1fr 0.5fr);
@@ -139,7 +139,7 @@ img{
 		right:0;
 	}
 
-
+/*---------------------------------------Home-------------------------------------------------*/
 /*-------------intro section--------------*/
 
 		.intro .center-box > h1{
@@ -208,7 +208,7 @@ img{
 }
 
 .donate .center-box{
-	background: grey;
+	background: var(--dark);
 	text-align: center;
 }
 
@@ -299,12 +299,52 @@ footer{
 
 }
 
+/*----------------------CHARACTERS--------------------------------------*/
+
+body > .char:nth-child(odd) {
+	background: grey;
+}
+body > .char:nth-child(even){
+	background: var(--dark);
+}
+
+.section-full.char { 
+	display: grid;
+	grid-template-columns: 0.75fr 1fr;
+	grid-column-gap: 1rem;
+	align-items: center;
+}
+
+.char-img {
+	justify-self: end;
+	height: 30rem;
+	width: 20rem;
+}
+	.char-img > img{
+		border-radius: var(--radius);
+	}
+
+.char-desc{
+	justify-self: start;
+	height: 30rem;
+	width: 75%;
+}
+ .char-desc > p {
+ 	text-align: justify;
+ 	line-height: 1.5;
+ }
+
+.char-desc > h1 {
+ 	margin-bottom: 0.5rem;
+ }
+
+
 /*-----------------------------BLOG-------------------------------------*/
 
 .blog-container{
 	margin: 0 auto 2rem auto;
 	padding-top:10rem;
-	max-width: 90%;
+	max-width: 75%;
 	display: grid;
 	grid-template-columns: repeat(1, 0.05fr 1fr 1fr 1fr);	
 	grid-template-areas:
@@ -323,11 +363,11 @@ footer{
 
 	.blog-container .social.blog {
 		grid-area: social;
-		padding: 2.25rem;
+		padding: 2rem;
 		display: grid;
 		grid-template-rows: repeat(3, 0.005fr);
 		position: fixed;
-		top: 35rem;
+		top: 34.7rem;
 		text-align: center;
 		}
 
@@ -401,25 +441,31 @@ aside > .blog-recent, .blog-subscribe, .blog-archive {
 
 	}
 
-	.blog-subscribe > h1 {
-		height: auto;
-		text-align: center;
-		padding-bottom: 1rem;
+	.blog-subscribe {
+		padding-bottom: 3rem;
 
 	}
-		.blog-subscribe .btn{
-			display: inline-block;
-			box-sizing: border-box;
-			margin-top: 0.5rem;
-			border-radius: 0.5rem;
-			width: 100%;
+
+		.blog-subscribe > h1 {
+			height: auto;
 			text-align: center;
-			background-color: var(--light);
-			color: var(--dark);
+			padding-bottom: 1rem;
+
 		}
-			.blog-subscribe .btn:hover {
-				background: lightgrey;
+			.blog-subscribe .btn{
+				display: inline-block;
+				box-sizing: border-box;
+				margin-top: 0.5rem;
+				border-radius: 0.5rem;
+				padding: 0.75rem 0;
+				width: 100%;
+				text-align: center;
+				background-color: var(--light);
+				color: var(--dark);
 			}
+				.blog-subscribe .btn:hover {
+					background: lightgrey;
+				}
 
 	.blog-archive {
 		height: auto;
