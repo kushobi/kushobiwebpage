@@ -9,34 +9,28 @@
 	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 	<!-- hugofy so that title of the posts are used -->
-	<title>lorem ipsum</title>
+	<title>Blog-List</title>
 </head>
 
 <body>
-	<nav>
+	<nav class="navigation">
 		<!-- upper navigation -->
-		<div class="upper-navigaton">
-			<div class="search-btn">
-				<i class="fas fa-search fa-2x"></i>
-			</div>			
-			<div class="donate-btn">
-				<button type="button">Donate</button>
+		<div class="navigation upper">
+				<span class="search-btn"><a href="#"><i class="fas fa-search fa-2x"></i></a></span>
+				<span><a href="#" class="btn">Donate</a></span>
+			<div class="social">
+				<a href="#"><i class="fab fa-facebook-f fa-2x"></i></a>
+				<a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+				<a href="#"><i class="fab fa-instagram fa-2x"></i></a>
 			</div>
-			<div class="upper social">
-				<i class="fab fa-facebook-f"></i>
-				<i class="fab fa-twitter"></i>
-				<i class="fab fa-instagram"></i>
-			</div>				
 		</div>
 
 
 		<!-- lower navigation -->
-		<div class="lower-navigaton">
-			<div class="logo">
-				<img src="#" alt="">
-			</div>
-			<ul class="navigation">
-				<li><a href="./">HOME</a></li>
+		<div class="navigation lower">
+			<img class="logo" src="img/logos/twc/Kushobi-01-edited.png" alt="Kushobi Voodoo Ninja In Training">
+			<ul>
+				<li><a href="./index.html">HOME</a></li>
 				<li><a href="./characters.html">CHARACTERS</a></li>
 				<li><a href="./blog.html">BLOG</a></li>
 				<li><a href="./about.html">ABOUT</a></li>
@@ -45,37 +39,179 @@
 		</div>
 	</nav>
 
-	<!-- beginning container -->
-	<main class="container">
-		<!-- search app for the blog page -->
-		<div class="blog-search-head">
-			<h1>Search Blog Archive</h1>
-			<input type="text" name="search archive">
-		</div>
-
-		<!-- blog post listing section -->
-		<section>
-			<div class="blog-list">
-				<div class="img">
-					<img src="#" alt="">
+	<div class="section-full list">
+			<div class="wrapper">
+				<!-- search app for the blog page -->
+				<div class="searchbar list">
+					<h1>Search blog archive</h1>
+					<br>
+					<form class="formbase list">
+			  			<input type="text" name="search" placeholder="Search..">
+					</form>
 				</div>
-				<div class="meta">
-					<h1>Title of post</h1>
-					<span>date</span>
-					<span>author</span>
-				</div>
+				<br>
 
-				<!-- sumarry of post -->
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto atque excepturi sunt, quaerat mollitia adipisci. Ullam aliquid, id, harum nam blanditiis ex incidunt maxime sed, ratione corporis dicta perspiciatis alias.</p>
+				<!-- blog post listing section -->
+				<section>
+					<ul>
+						<li>
+							<a href="#">
+								<article class="article">
+									<img class="article-img" src="https://source.unsplash.com/random/250x250" alt="">
+									<div>
+										<div class="meta">
+											<h1>Title of post</h1>
+											<span>date</span>
+											<span>author</span>
+										</div>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto atque excepturi sunt, quaerat mollitia adipisci. Ullam aliquid, id, harum nam blanditiis ex incidunt maxime sed, ratione corporis dicta perspiciatis alias.</p>
+									</div>
+								</article>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<article class="article">
+									<img class="article-img" src="https://source.unsplash.com/random/250x251" alt="">
+									<div>
+										<div class="meta">
+											<h1>Title of post</h1>
+											<span>date</span>
+											<span>author</span>
+										</div>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto atque excepturi sunt, quaerat mollitia adipisci. Ullam aliquid, id, harum nam blanditiis ex incidunt maxime sed, ratione corporis dicta perspiciatis alias.</p>
+									</div>
+								</article>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<article class="article">
+									<img class="article-img" src="https://source.unsplash.com/random/250x252" alt="">
+									<div>
+										<div class="meta">
+											<h1>Title of post</h1>
+											<span>date</span>
+											<span>author</span>
+										</div>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto atque excepturi sunt, quaerat mollitia adipisci. Ullam aliquid, id, harum nam blanditiis ex incidunt maxime sed, ratione corporis dicta perspiciatis alias.</p>
+									</div>
+								</article>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<article class="article">
+									<img class="article-img" src="https://source.unsplash.com/random/250x253" alt="">
+									<div>
+										<div class="meta">
+											<h1>Title of post</h1>
+											<span>date</span>
+											<span>author</span>
+										</div>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto atque excepturi sunt, quaerat mollitia adipisci. Ullam aliquid, id, harum nam blanditiis ex incidunt maxime sed, ratione corporis dicta perspiciatis alias.</p>
+									</div>
+								</article>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<article class="article">
+									<img class="article-img" src="https://source.unsplash.com/random/250x254" alt="">
+									<div>
+										<div class="meta">
+											<h1>Title of post</h1>
+											<span>date</span>
+											<span>author</span>
+										</div>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto atque excepturi sunt, quaerat mollitia adipisci. Ullam aliquid, id, harum nam blanditiis ex incidunt maxime sed, ratione corporis dicta perspiciatis alias.</p>
+									</div>
+								</article>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<article class="article">
+									<img class="article-img" src="https://source.unsplash.com/random/250x255" alt="" >
+									<div>
+										<div class="meta">
+											<h1>Title of post</h1>
+											<span>date</span>
+											<span>author</span>
+										</div>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto atque excepturi sunt, quaerat mollitia adipisci. Ullam aliquid, id, harum nam blanditiis ex incidunt maxime sed, ratione corporis dicta perspiciatis alias.</p>
+									</div>
+								</article>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<article class="article">
+									<img class="article-img" src="https://source.unsplash.com/random/250x256" alt="">
+									<div>
+										<div class="meta">
+											<h1>Title of post</h1>
+											<span>date</span>
+											<span>author</span>
+										</div>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto atque excepturi sunt, quaerat mollitia adipisci. Ullam aliquid, id, harum nam blanditiis ex incidunt maxime sed, ratione corporis dicta perspiciatis alias.</p>
+									</div>
+								</article>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<article class="article">
+									<img class="article-img" src="https://source.unsplash.com/random/250x257" alt="">
+									<div>
+										<div class="meta">
+											<h1>Title of post</h1>
+											<span>date</span>
+											<span>author</span>
+										</div>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto atque excepturi sunt, quaerat mollitia adipisci. Ullam aliquid, id, harum nam blanditiis ex incidunt maxime sed, ratione corporis dicta perspiciatis alias.</p>
+									</div>
+								</article>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<article class="article">
+									<img class="article-img" src="https://source.unsplash.com/random/250x258" alt="">
+									<div>
+										<div class="meta">
+											<h1>Title of post</h1>
+											<span>date</span>
+											<span>author</span>
+										</div>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto atque excepturi sunt, quaerat mollitia adipisci. Ullam aliquid, id, harum nam blanditiis ex incidunt maxime sed, ratione corporis dicta perspiciatis alias.</p>
+									</div>
+								</article>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<article class="article">
+									<img class="article-img" src="https://source.unsplash.com/random/250x259" alt="">
+									<div>
+										<div class="meta">
+											<h1>Title of post</h1>
+											<span>date</span>
+											<span>author</span>
+										</div>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto atque excepturi sunt, quaerat mollitia adipisci. Ullam aliquid, id, harum nam blanditiis ex incidunt maxime sed, ratione corporis dicta perspiciatis alias.</p>
+									</div>
+								</article>
+							</a>
+						</li>
+					</ul>
+				</section>
+
+				<div class="load-btn">
+					<button>Load More</button>
+				</div>
 			</div>
-		</section>
-
-		<div class="load-btn">
-			<button>Load More</button>
 		</div>
-
-	<!-- end container  -->
-	</main>	
 
 	<!-- Footer section -->
 	<footer>
